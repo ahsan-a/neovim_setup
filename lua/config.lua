@@ -8,11 +8,16 @@ vim.opt.completeopt = "menuone,noinsert,noselect"
 vim.cmd("set shortmess+=c")
 vim.opt.mouse="a"
 vim.opt.termguicolors = true
+vim.opt.shell = "powershell.exe"
 vim.g.mapleader = " "
 
+vim.wo.wrap = true
+vim.wo.linebreak = true
 
 -- keymaps
 vim.api.nvim_set_keymap('n', "<leader>e", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('', "<C-s>", ":w<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('i', "<C-s>", "<Esc>:w<CR>a", {noremap = true, silent = true})
 
 -- markdown
 

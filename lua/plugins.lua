@@ -97,9 +97,10 @@ return require('packer').startup(function()
     requires = {'kyazdani42/nvim-web-devicons'},
   }
   use {
-  "folke/which-key.nvim",
-  config = function()
-    require("core.whichkey").setup()
-  end
-}
+    "folke/which-key.nvim",
+    config = function()
+      require("core.whichkey").setup()
+    end
+  }
+  use {"ellisonleao/glow.nvim"}
 end)
